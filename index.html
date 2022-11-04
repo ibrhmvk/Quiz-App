@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <title>Codedamn - Quiz Project</title>
+</head>
+
+<body>
+    <header>
+        <a id=leaderboard onclick="displayScore()">View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+            </i></a>
+        <p class="time">Time: <b id="countdown"></b></p>
+    </header>
+    <main>
+        <div id="start-card">
+            <h3 class="start-heading">Coding Quiz Challenge</h3>
+            <p class="start-para">Try to answer the following code-related qustions within the time limit.<br> Keep in
+                mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button class="start-button" onclick="quizTimer()">Start Quiz</button>
+        </div>
+
+        <div id="question-card">
+            <h3 class="question"></h3>
+            <div class="option-list"></div>
+            <div class="result">
+                <hr class="hr">
+                <p class="correct1"></p>
+
+            </div>
+        </div>
+
+        <div id="high-score">
+            <h3 class="score-head">Highscores</h3>
+            <div class="score-winners">
+            </div>
+            <div class="score-buttons">
+                <button class="goback" onclick="goBack()">Go Back</button>
+                <button class="clearall" onclick="clearAll()">Clear Highscores</button>
+            </div>
+        </div>
+
+        <div id="final-one">
+            <h3 class="alldone">All done!</h3>
+            <p class="final-score">Your final score is <b class="score"></b></p>
+            <form class="name-form" action="">
+                <label for="name">Enter initials:</label> <input class="name-input" type="text">
+                <input class="submit-button" onclick="nameSubmit()" type="button" value="submit">
+            </form>
+        </div>
+
+    </main>
+    <script src="assets/script.js"></script>
+    <script src="assets/questions.js"></script>
+</body>
+
+</html>
